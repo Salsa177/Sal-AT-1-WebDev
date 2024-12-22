@@ -70,7 +70,7 @@ nav a {
     cursor: pointer;
 }
 nav .ACTIVE {
-    color: rgba(108, 255, 169, 0.55);
+    color: rgba(135, 228, 174, 0.55);
 }
 nav .ACTIVE:hover {
     color: rgb(179, 255, 205);
@@ -124,7 +124,7 @@ nav a:hover {
 main {
     height:fit-content;
     color:whitesmoke;
-    min-height: 750px;
+    min-height: 788px;
 }
 
 
@@ -174,12 +174,12 @@ footer marquee {
     display: none;
     z-index: 1;
     position: absolute;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.45);
     min-width: 140%;
     border-radius: 5px;
     background-color: rgb(163, 179, 170);
     margin-left:5px;
-    min-height:500%;
+    min-height:100%;
 }
 .DROP-CONTENT a {
     color: black;
