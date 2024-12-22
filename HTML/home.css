@@ -124,13 +124,17 @@ nav a:hover {
 main {
     height:fit-content;
     color:whitesmoke;
-    min-height: 758px;
+    min-height: 750px;
 }
 
 
 footer {
-    background: rgba(255, 255, 255, 0.13);
-    height:75px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.13);
+    height:100px;
     color: whitesmoke;
 }
 footer p {
@@ -190,27 +194,4 @@ footer marquee {
     font-size:100%;
     border-radius: 5px;
     color: rgba(0, 0, 0, 0.849);
-}
-.GAMES {
-    position: relative;
-}
-.GAMES input:checked {
-    background-color:rgba(255, 255, 255, 0.555);
-    border-radius: 5px;
-}
-.GAMES a:hover {
-    background: none;
-}
-.G-LIST {
-    display:none;
-    z-index: 1;
-    position: relative;
-    border-radius: 5px;
-    text-indent:15px;
-}
-.G-LIST:hover {
-    background-color:rgba(255, 255, 255, 0.555);
-}
-.GAMES input:checked .G-LIST {
-    display:block;
 }
