@@ -69,15 +69,17 @@ nav a {
     color: rgba(245,245,245,0.55);
     cursor: pointer;
 }
+nav a:hover {
+    color: rgba(245,245,245,1);
+}
 nav .ACTIVE {
     color: rgba(135, 228, 174, 0.55);
 }
 nav .ACTIVE:hover {
     color: rgb(179, 255, 205);
 }
-nav a:hover {
-    color: rgba(245,245,245,1);
-}
+
+
 
 
 
@@ -108,15 +110,18 @@ nav a:hover {
     padding:20px;
     background: none;
     border: none;
-    color: rgba(245,245,245,0.8);
+    color: rgba(245,245,245,0.65);
     outline: none;
+    font-weight: bold;
 }
 .SEARCH-INPUT::placeholder {
     color: rgba(245,245,245,0.55);
     font-size: 110%;
+    font-weight: bold;
 }
 .SEARCH-INPUT:focus {
-    color: rgba(245,245,245,0.55);
+    color: whitesmoke;
+    font-weight: bold;
 }
 
 
@@ -194,4 +199,12 @@ footer marquee {
     font-size:100%;
     border-radius: 5px;
     color: rgba(0, 0, 0, 0.849);
+}
+.DROP-CONTENT .ACTIVE {
+    color: rgb(20, 79, 45);
+    font-weight: bold;
+}
+.DROP-CONTENT .ACTIVE:hover {
+    color: rgb(20, 79, 45);
+    font-weight:800;
 }
