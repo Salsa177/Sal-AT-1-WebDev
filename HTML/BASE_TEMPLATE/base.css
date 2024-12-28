@@ -215,133 +215,14 @@ nav .ACTIVE:hover {
 
 
 
+
+
 main {
     margin-top: auto 1;
     height:fit-content;
     color:whitesmoke;
     min-height: 788px;
 }
-
-.MAIN-TOP {
-    display: block;
-}
-.DIV-GET-STARTED {
-    user-select: none;
-    cursor:default;
-    min-block-size: 200px;
-    text-align: center;
-    padding-top: 70px;
-    margin-bottom: 30px;
-    margin-top: 50px;
-}
-.DIV-GET-STARTED a {
-    font-size: 72px;
-    font-weight:900;
-    margin-right: 15px;
-    text-shadow:10px 11px rgba(0, 0, 0, 0.8);
-}
-div.DIV-GET-STARTED a:hover {
-    color: rgba(245,245,245,0.55);
-    text-shadow:10px 11px rgba(0, 0, 0, 0.3);
-    cursor:pointer;
-}
-
-
-.VIEW-POST-SEC {
-    user-select: none;
-    min-block-size: 500px;
-    max-block-size: 90vh;
-    display: flex;
-    
-}
-.VIEW-DIV {
-    min-width: min-content;
-    min-height: max-content;
-    flex:1;
-    display: block;
-    padding-top: 40px;
-    padding-left: 29px;
-    padding-right: 29px;
-    padding-bottom: 40px;
-}
-.VIEW {
-    border-radius: 20px;
-    border-color: whitesmoke;
-    border-width: 10px;
-    border-style: solid;
-    background-color: rgba(46, 46, 46, 0.673);
-    text-align: center;
-    min-block-size: 650px;
-    margin-left:15px;
-    padding-top:55px;
-}
-.VIEW a {
-    font-size: 47px;
-    font-weight:700;
-    padding-right: 20px;
-    text-shadow:6px 7px rgba(0, 0, 0, 0.4);
-}
-.VIEW a:hover {
-    color: rgba(245,245,245,0.55);
-    cursor:pointer;
-    text-shadow:6px 7px rgba(0, 0, 0, 0.2);
-}
-.POST-DIV {
-    min-width: min-content;
-    min-height: max-content;
-    flex:1;
-    display: block;
-    padding-top: 40px;
-    padding-left: 29px;
-    padding-right: 29px;
-    padding-bottom: 40px;
-    
-}
-.POST {
-    border-radius: 20px;
-    border-color: whitesmoke;
-    border-width: 10px;
-    border-style: solid;
-    background-color: rgba(46, 46, 46, 0.673);
-    border-radius: 20px;
-    min-block-size:650px;
-    text-align: center;
-    margin-right:15px;
-    padding-top:55px;
-}
-.POST a {
-    font-size: 47px;
-    font-weight:700;
-    padding-left: 20px;
-    text-shadow:6px 7px rgba(0, 0, 0, 0.4);
-}
-.POST a:hover {
-    color: rgba(245,245,245,0.55);
-    cursor:pointer;
-    text-shadow:6px 7px rgba(0, 0, 0, 0.2);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
