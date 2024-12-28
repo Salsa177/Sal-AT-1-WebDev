@@ -217,10 +217,10 @@ main {
     display: block;
 }
 .DIV-GET-STARTED {
-    background-color: rgba(0, 255, 255, 0.356);
-    min-block-size: 170px;
+   
+    min-block-size: 200px;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 55px;
 }
 .DIV-GET-STARTED a {
     font-size: 70px;
