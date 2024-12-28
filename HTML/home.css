@@ -4,15 +4,19 @@
     box-sizing: border-box;
 }
 html {
-    height:100%;
-    width:100%;
+    min-height:max-content;
+    min-width: fit-content;
+    height:100px;
+    width: 100%;
     
 }
 body {
     background: linear-gradient(#12291f, #1c4936, #237954);
     font-family:'Segoe UI';
-    height:100%;
-    width:100%;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
     
 }
 ::-webkit-scrollbar {
@@ -33,135 +37,37 @@ body {
 
 
 .TOP {
+    min-width:max-content;
     size: auto;
     display: flex;
-    margin: auto;
+    margin-top: auto 0;
     padding: 0px;
     color:whitesmoke;
+    
 }
+
+
+
+.DD-TITLE {
+    width: max-content;
+    display: flex;
+    flex: 1.3;
+}
+
+
+
 header {
-    text-align: center;
+    text-align: left;
     background: none;
-    flex: 1;
     font-size: 25px;
     user-select: none;
-    margin-left: 20px;
+    flex:1;
 }
 header h1 {
     margin-top: 30px;
 }
 
 
-
-nav {
-    background: none;
-    font-size: 23px;
-    font-weight: bold;
-    flex: 2.5;
-    padding: 40px;
-    user-select: none;
-    margin-left: 200px;
-}
-nav a {
-    margin-left: 50px;
-    height: 100%;
-    width: 100%;
-    color: rgba(245,245,245,0.55);
-    cursor: pointer;
-}
-nav a:hover {
-    color: rgba(245,245,245,1);
-}
-nav .ACTIVE {
-    color: rgba(135, 228, 174, 0.55);
-}
-nav .ACTIVE:hover {
-    color: rgb(179, 255, 205);
-}
-
-
-
-
-
-.SEARCH-DIV {
-    width: 400px;
-    height: 40px;
-    float: right;
-    padding: 1px;
-    margin-right: 150px;
-    border-radius: 25px;
-    background: rgba(0,0,0,0.2);
-    display: flex;
-}
-.SEARCH-DIV button {
-    background: none;
-    border: none;
-    color: rgba(245,245,245,0.55);
-    font-size: 80%;
-    cursor: pointer;
-    flex: 1;
-}
-.SEARCH-DIV button:hover {
-    color: whitesmoke;
-}
-.SEARCH-INPUT {
-    width: 350px;
-    height: 40px;
-    padding:20px;
-    background: none;
-    border: none;
-    color: rgba(245,245,245,0.65);
-    outline: none;
-    font-weight: bold;
-}
-.SEARCH-INPUT::placeholder {
-    color: rgba(245,245,245,0.55);
-    font-size: 110%;
-    font-weight: bold;
-}
-.SEARCH-INPUT:focus {
-    color: whitesmoke;
-    font-weight: bold;
-}
-
-
-
-main {
-    height:fit-content;
-    color:whitesmoke;
-    min-height: 788px;
-}
-
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.13);
-    height:100px;
-    color: whitesmoke;
-}
-footer p {
-    padding-left: 15px;
-    padding-top: 7px;
-}
-footer marquee {
-    padding-left: 15px;
-    padding-top: 7px;
-}
-
-.DROPDOWN {
-    user-select: none;
-    position: relative;
-    display:inline-block;
-}
-.DROPDOWN:hover .DROP-CONTENT {
-    display:block;
-}
-.DROPDOWN:hover .material-symbols-outlined {
-    color: whitesmoke
-}
 .MENU {
     font-size: 80px;
 }
@@ -171,8 +77,21 @@ footer marquee {
     border: none;
     cursor:pointer;
 }
+.DROPDOWN {
+    user-select: none;
+    position: relative;
+    display:inline-block;
+    width: fit-content;
+    flex:0.3;
+}
+.DROPDOWN:hover .DROP-CONTENT {
+    display:block;
+}
+.DROPDOWN:hover .material-symbols-outlined {
+    color: whitesmoke
+}
 .DROP-BTN {
-    margin-left: 30px;
+    margin-left: 37px;
     margin-top: 17px;
 }
 .DROP-CONTENT {
@@ -207,4 +126,186 @@ footer marquee {
 .DROP-CONTENT .ACTIVE:hover {
     color: rgb(20, 79, 45);
     font-weight:800;
+}
+
+
+
+nav {
+    min-width: max-content;
+    font-size: 23px;
+    font-weight: bold;
+    flex: 2.5;
+    padding-top: 40px;
+    user-select: none;
+    text-align: center;
+    margin-right: 30px;
+}
+nav a {
+    margin-right: 50px;
+    height: 100%;
+    width: 100%;
+    color: rgba(245,245,245,0.55);
+    cursor: pointer;
+}
+nav a:hover {
+    color: rgba(245,245,245,1);
+}
+nav .ACTIVE {
+    color: rgba(135, 228, 174, 0.55);
+}
+nav .ACTIVE:hover {
+    color: rgb(179, 255, 205);
+}
+
+
+
+.SEARCH-DIV {
+    margin-top: 30px;
+    max-width: 400px;
+    max-height: 40px;
+    float: right;
+    padding: 1px;
+    margin-right: 50px;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    flex:0.5;
+}
+.SEARCH-DIV button {
+    margin-right: 15px;
+    background: none;
+    border: none;
+    color: rgba(245,245,245,0.55);
+    font-size: 80%;
+    cursor: pointer;
+    flex: 1;
+}
+.SEARCH-DIV button:hover {
+    color: whitesmoke;
+}
+.SEARCH-INPUT {
+    width: 350px;
+    height: 40px;
+    padding:20px;
+    background: none;
+    border: none;
+    color: rgba(245,245,245,0.65);
+    outline: none;
+    font-weight: bold;
+}
+.SEARCH-INPUT::placeholder {
+    color: rgba(245,245,245,0.55);
+    font-size: 110%;
+    font-weight: bold;
+}
+.SEARCH-INPUT:focus {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+
+
+
+main {
+    margin-top: auto 1;
+    height:fit-content;
+    color:whitesmoke;
+    min-height: 788px;
+}
+
+.MAIN-TOP {
+    display: block;
+}
+.DIV-GET-STARTED {
+    background-color: rgba(0, 255, 255, 0.356);
+    min-block-size: 170px;
+    text-align: center;
+    padding-top: 25px;
+}
+.DIV-GET-STARTED a {
+    font-size: 70px;
+    font-weight:900;
+    margin-right: 15px;
+}
+
+
+.VIEW-POST-SEC {
+    min-block-size: 500px;
+    display: flex;
+    
+}
+.VIEW-DIV {
+    min-width: min-content;
+    min-height: max-content;
+    flex:1;
+    display: block;
+    padding-top: 40px;
+    padding-left: 29px;
+    padding-right: 29px;
+    padding-bottom: 40px;
+}
+.VIEW {
+    min-block-size: 650px;
+    margin-left:15px;
+}
+.POST-DIV {
+    min-width: min-content;
+    min-height: max-content;
+    flex:1;
+    display: block;
+    padding-top: 40px;
+    padding-left: 29px;
+    padding-right: 29px;
+    padding-bottom: 40px;
+    
+}
+.POST {
+    min-block-size:650px;
+    margin-right:15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    margin-top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height:100px;
+    background: whitesmoke;
+    color: black;
+}
+footer p {
+    padding-left: 15px;
+    padding-top: 7px;
+}
+footer marquee {
+    padding-left: 15px;
+    padding-top: 35px;
 }

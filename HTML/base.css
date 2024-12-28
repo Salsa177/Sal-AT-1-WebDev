@@ -1,0 +1,217 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html {
+    height:100%;
+    width:100%;
+    
+}
+body {
+    background: linear-gradient(#12291f, #1c4936, #237954);
+    font-family:'Segoe UI';
+    height:100%;
+    width:100%;
+    
+}
+::-webkit-scrollbar {
+    width: 12.5px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: linear-gradient(#12291f, #1c4936, #237954);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(150, 150, 150, 0.5);
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(192, 192, 192);   
+}
+
+
+
+.TOP {
+    size: auto;
+    display: flex;
+    margin: auto;
+    padding: 0px;
+    color:whitesmoke;
+    
+}
+header {
+    text-align: left;
+    background: none;
+    font-size: 25px;
+    user-select: none;
+    flex:1;
+}
+header h1 {
+    margin-top: 30px;
+}
+
+.DD-TITLE {
+    width: max-content;
+    display: flex;
+    flex: 1.5;
+}
+
+
+nav {
+    background: none;
+    font-size: 23px;
+    font-weight: bold;
+    flex: 2.5;
+    padding: 40px;
+    user-select: none;
+    
+}
+nav a {
+    margin-left: 50px;
+    height: 100%;
+    width: 100%;
+    color: rgba(245,245,245,0.55);
+    cursor: pointer;
+}
+nav a:hover {
+    color: rgba(245,245,245,1);
+}
+nav .ACTIVE {
+    color: rgba(135, 228, 174, 0.55);
+}
+nav .ACTIVE:hover {
+    color: rgb(179, 255, 205);
+}
+
+
+
+
+
+.SEARCH-DIV {
+    width: 400px;
+    height: 40px;
+    float: right;
+    padding: 1px;
+    margin-right: 150px;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+}
+.SEARCH-DIV button {
+    background: none;
+    border: none;
+    color: rgba(245,245,245,0.55);
+    font-size: 80%;
+    cursor: pointer;
+    flex: 1;
+}
+.SEARCH-DIV button:hover {
+    color: whitesmoke;
+}
+.SEARCH-INPUT {
+    width: 350px;
+    height: 40px;
+    padding:20px;
+    background: none;
+    border: none;
+    color: rgba(245,245,245,0.65);
+    outline: none;
+    font-weight: bold;
+}
+.SEARCH-INPUT::placeholder {
+    color: rgba(245,245,245,0.55);
+    font-size: 110%;
+    font-weight: bold;
+}
+.SEARCH-INPUT:focus {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+
+
+main {
+    height:fit-content;
+    color:whitesmoke;
+    min-height: 788px;
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.13);
+    height:100px;
+    color: whitesmoke;
+}
+footer p {
+    padding-left: 15px;
+    padding-top: 7px;
+}
+footer marquee {
+    padding-left: 15px;
+    padding-top: 7px;
+}
+
+.DROPDOWN {
+    user-select: none;
+    position: relative;
+    display:inline-block;
+    width: fit-content;
+    flex:0.3;
+}
+.DROPDOWN:hover .DROP-CONTENT {
+    display:block;
+}
+.DROPDOWN:hover .material-symbols-outlined {
+    color: whitesmoke
+}
+.MENU {
+    font-size: 80px;
+}
+.material-symbols-outlined {
+    background: none;
+    color: rgba(108, 255, 169, 0.55);
+    border: none;
+    cursor:pointer;
+}
+.DROP-BTN {
+    margin-left: 37px;
+    margin-top: 17px;
+}
+.DROP-CONTENT {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.45);
+    min-width: 140%;
+    border-radius: 5px;
+    background-color: rgb(163, 179, 170);
+    margin-left:5px;
+    min-height:100%;
+}
+.DROP-CONTENT a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    cursor:pointer;
+    padding:7px;
+}
+.DROP-CONTENT a:hover {
+    background-color:rgba(255, 255, 255, 0.555);
+    font-weight: bold;
+    font-size:100%;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.849);
+}
+.DROP-CONTENT .ACTIVE {
+    color: rgb(20, 79, 45);
+    font-weight: bold;
+}
+.DROP-CONTENT .ACTIVE:hover {
+    color: rgb(20, 79, 45);
+    font-weight:800;
+}
