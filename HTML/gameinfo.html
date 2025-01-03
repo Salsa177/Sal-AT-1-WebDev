@@ -22,8 +22,8 @@
                     </button>
                 </div>
                 <div class="DROP-CONTENT">
-                    <a class="ACTIVE">Home</a>
-                    <a>Games List</a>
+                    <a href="home.html">Home</a>
+                    <a href="..\HTML\gameinfo.html">Games List</a>
                     <a>About</a>
                 </div>
             </div>
@@ -32,19 +32,19 @@
             </header>
         </div>
         <nav>
-            <a class="ACTIVE">Home</a>
-            <a>Games List</a>
+            <a href="home.html">Home</a>
+            <a href="..\HTML\gameinfo.html">Games List</a>
             <a>About</a>
         </nav>
-        <div class="SEARCH-DIV">
-            <input  type="search" placeholder="Search..." class="SEARCH-INPUT">
-            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>        
-        </div>
-        
     </section>
     <main>
-
-        
+        <section class="MAIN-CONTAINER">
+            <img src="..\IMG\placeholder.png">
+            <div class="GAME-INFO-SEC">
+                <h1>{{game_title}}</h1>
+                <p>{{game_info}}</p>
+            </div>
+        </section>
     </main>
     <footer>
         <marquee behaviour="scroll" direction="right" scrollamount="10">Footer :P</marquee>

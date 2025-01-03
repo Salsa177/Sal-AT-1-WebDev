@@ -19,7 +19,9 @@ body {
     width: 100%;
     
 }
-  
+a {
+    text-decoration: none;
+}
 ::-webkit-scrollbar {
     width: 12.5px;
     height: 10px;
@@ -139,8 +141,8 @@ nav {
     flex: 2.5;
     padding-top: 40px;
     user-select: none;
-    text-align: center;
-    margin-right: 57px;
+    margin-right: 300px;
+    text-align: right;
 }
 nav a {
     margin-right: 50px;
@@ -222,6 +224,41 @@ main {
     min-height: 788px;
 }
 
+
+.MAIN-CONTAINER {
+    margin-top: 30px;
+    background-color: none;
+    display: flex;
+    min-height: 860px;
+    padding: 30px;
+}
+.MAIN-CONTAINER img {
+    display: block;
+    background-color: rgb(255, 0, 0);
+    flex: 0.75;
+    margin-right: 30px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    border-radius: 30px;
+    block-size: auto;
+}
+
+.GAME-INFO-SEC {
+    background-color: rgba(0, 0, 0, 0.301);
+    border-radius: 30px;
+    flex: 1.25;
+    color: whitesmoke;
+}
+.GAME-INFO-SEC h1 {
+    text-align: center;
+    font-size: 300%;
+    padding-top: 15px;
+}
+.GAME-INFO-SEC p {
+    font-size: 125%;
+    padding: 35px;
+}
 
 
 

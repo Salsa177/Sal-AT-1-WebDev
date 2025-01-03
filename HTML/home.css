@@ -141,8 +141,8 @@ nav {
     flex: 2.5;
     padding-top: 40px;
     user-select: none;
-    text-align: center;
-    margin-right: 57px;
+    margin-right: 300px;
+    text-align: right;
 }
 nav a {
     margin-right: 50px;
