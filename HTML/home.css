@@ -17,7 +17,9 @@ body {
     display:flex;
     flex-direction: column;
     width: 100%;
-    
+}
+a {
+    text-decoration: none;
 }
   
 ::-webkit-scrollbar {
@@ -73,7 +75,7 @@ header h1 {
 }
 .material-symbols-outlined {
     background: none;
-    color: rgba(108, 255, 169, 0.55);
+    color: rgba(214, 188, 255, 0.733);
     border: none;
     cursor:pointer;
 }
@@ -102,7 +104,7 @@ header h1 {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.45);
     min-width: 140%;
     border-radius: 5px;
-    background-color: rgb(163, 179, 170);
+    background-color: rgb(203, 214, 221);
     margin-left:5px;
     min-height:100%;
     font-size:110%;
@@ -122,11 +124,11 @@ header h1 {
     color: rgba(0, 0, 0, 0.849);
 }
 .DROP-CONTENT .ACTIVE {
-    color: rgb(20, 79, 45);
+    color: rgb(72, 66, 97);
     font-weight: 800;
 }
 .DROP-CONTENT .ACTIVE:hover {
-    color: rgb(20, 79, 45);
+    color: rgb(72, 66, 97);
     font-weight: 900;
 }
 
@@ -154,10 +156,10 @@ nav a:hover {
     color: rgba(245,245,245,1);
 }
 nav .ACTIVE {
-    color: rgba(135, 228, 174, 0.55);
+    color: rgba(230, 209, 255, 0.6);
 }
 nav .ACTIVE:hover {
-    color: rgb(179, 255, 205);
+    color: rgb(230, 209, 255);
 }
 
 
@@ -226,14 +228,14 @@ main {
     display: block;
 }
 .DIV-GET-STARTED {
-    background-color: rgba(113, 192, 172, 0.418);
-    box-shadow:0px 30px rgba(0, 0, 0, 0.5);
+    color:whitesmoke;
+    background-color: rgba(145, 120, 173, 0.4);
+    box-shadow:0px 30px rgba(22, 10, 29, 0.5);
     border-radius: 50px;
     user-select: none;
     cursor:default;
     min-block-size: 200px;
     text-align: center;
-    padding-top: 45px;
     margin-bottom: 100px;
     margin-top: 90px;
     margin-right: 600px;
@@ -242,18 +244,23 @@ main {
 .DIV-GET-STARTED:hover {
     cursor:pointer;
 }
-.DIV-GET-STARTED a {
-    padding: 20px;
+.DIV-GET-STARTED p {
+    min-width: max-content;
+    height: 200px;
+    padding-top: 45px;
+    padding-bottom: 20px;
     font-size: 77px;
     font-weight:900;
     margin-right: 15px;
-    text-shadow:10px 11px rgba(0, 0, 0, 0.8);
+    text-shadow:8px 10px rgba(0, 0, 0, 0.8);
+}
+.DIV-GET-STARTED a {
+    color:whitesmoke;
 }
 .DIV-GET-STARTED:active {
-    padding-top: 45px;
     margin-bottom: 85px;
     margin-top: 105px;
-    box-shadow: 0px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 15px rgba(22, 10, 29, 0.5);
 }
 
 
@@ -335,31 +342,6 @@ main {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -372,6 +354,7 @@ footer {
     color: whitesmoke;
     font-size: 30px;
     font-weight: 900;
+    user-select: none;
 }
 footer p {
     padding-left: 15px;
