@@ -226,25 +226,36 @@ main {
     display: block;
 }
 .DIV-GET-STARTED {
+    background-color: rgba(113, 192, 172, 0.418);
+    box-shadow:0px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
     user-select: none;
     cursor:default;
     min-block-size: 200px;
     text-align: center;
-    padding-top: 70px;
-    margin-bottom: 30px;
-    margin-top: 50px;
+    padding-top: 45px;
+    margin-bottom: 100px;
+    margin-top: 90px;
+    margin-right: 600px;
+    margin-left: 600px;
+}
+.DIV-GET-STARTED:hover {
+    cursor:pointer;
 }
 .DIV-GET-STARTED a {
-    font-size: 72px;
+    padding: 20px;
+    font-size: 77px;
     font-weight:900;
     margin-right: 15px;
     text-shadow:10px 11px rgba(0, 0, 0, 0.8);
 }
-div.DIV-GET-STARTED a:hover {
-    color: rgba(245,245,245,0.55);
-    text-shadow:10px 11px rgba(0, 0, 0, 0.3);
-    cursor:pointer;
+.DIV-GET-STARTED:active {
+    padding-top: 45px;
+    margin-bottom: 85px;
+    margin-top: 105px;
+    box-shadow: 0px 15px rgba(0, 0, 0, 0.5);
 }
+
 
 
 .VIEW-POST-SEC {
