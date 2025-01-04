@@ -234,7 +234,7 @@ main {
 }
 .MAIN-CONTAINER img {
     display: block;
-    background-color: rgb(255, 0, 0);
+    background-color: none;
     flex: 0.75;
     margin-right: 30px;
     margin-top: auto;
@@ -256,8 +256,12 @@ main {
     padding-top: 15px;
 }
 .GAME-INFO-SEC p {
-    font-size: 125%;
+    font-size: 150%;
     padding: 35px;
+}
+.GAME-INFO-SEC ul {
+    font-size: 150%;
+    margin-left: 100px;
 }
 
 

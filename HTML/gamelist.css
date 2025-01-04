@@ -1,0 +1,296 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html {
+    min-height:max-content;
+    min-width: fit-content;
+    height:100px;
+    width: 100%;
+    
+}
+body {
+    background: linear-gradient(#12291f, #1c4936, #237954);
+    font-family: "Nunito", serif;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+a {
+    text-decoration: none;
+}
+::-webkit-scrollbar {
+    width: 12.5px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: linear-gradient(#12291f, #1c4936, #237954);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(150, 150, 150, 0.5);
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(192, 192, 192);   
+}
+
+
+
+.TOP {
+    min-width:max-content;
+    size: auto;
+    display: flex;
+    margin-top: auto 0;
+    padding: 0px;
+    color:whitesmoke;
+    
+}
+
+
+
+.DD-TITLE {
+    width: max-content;
+    display: flex;
+    flex: 1.4;
+}
+
+
+header {
+    text-align: left;
+    background: none;
+    font-size: 25px;
+    user-select: none;
+    flex:1;
+}
+header h1 {
+    margin-top: 30px;
+}
+
+
+.MENU {
+    font-size: 80px;
+}
+.material-symbols-outlined {
+    background: none;
+    color: rgba(214, 188, 255, 0.733);
+    border: none;
+    cursor:pointer;
+}
+.DROPDOWN {
+    user-select: none;
+    position: relative;
+    display:inline-block;
+    width: fit-content;
+    flex:0.3;
+}
+.DROPDOWN:hover .DROP-CONTENT {
+    display:block;
+}
+.DROPDOWN:hover .material-symbols-outlined {
+    color: whitesmoke
+}
+.DROP-BTN {
+    margin-left: 30px;
+    margin-top: 17px;
+    margin-right: 30px;
+}
+.DROP-CONTENT {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.45);
+    min-width: 140%;
+    border-radius: 5px;
+    background-color: rgb(203, 214, 221);
+    margin-left:5px;
+    min-height:100%;
+    font-size:110%;
+}
+.DROP-CONTENT a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    cursor:pointer;
+    padding:7px;
+}
+.DROP-CONTENT a:hover {
+    background-color:rgba(255, 255, 255, 0.555);
+    font-weight: 800;
+    font-size:100%;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.849);
+}
+.DROP-CONTENT .ACTIVE {
+    color: rgb(72, 66, 97);
+    font-weight: 800;
+}
+.DROP-CONTENT .ACTIVE:hover {
+    color: rgb(72, 66, 97);
+    font-weight: 900;
+}
+
+
+
+nav {
+    min-width: max-content;
+    font-size: 23px;
+    font-weight: bold;
+    flex: 2.5;
+    padding-top: 40px;
+    user-select: none;
+    margin-right: 300px;
+    text-align: right;
+}
+nav a {
+    margin-right: 50px;
+    height: 100%;
+    width: 100%;
+    color: rgba(245,245,245,0.55);
+    cursor: pointer;
+    font-size:120%;
+}
+nav a:hover {
+    color: rgba(245,245,245,1);
+}
+nav .ACTIVE {
+    color: rgba(230, 209, 255, 0.6);
+}
+nav .ACTIVE:hover {
+    color: rgb(230, 209, 255);
+}
+
+
+
+.SEARCH-DIV {
+    margin-top: 30px;
+    max-width: 400px;
+    max-height: 53px;
+    float: right;
+    margin-right: 50px;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    flex:0.5;
+}
+.SEARCH-DIV button {
+    padding-right: 20px;
+    padding-bottom: 1px;
+    background: none;
+    border: none;
+    color: rgba(245,245,245,0.55);
+    font-size: 130%;
+    cursor: pointer;
+    flex: 1;
+}
+.SEARCH-DIV button:hover {
+    color: whitesmoke;
+}
+.SEARCH-INPUT {
+    width: 350px;
+    height: 40px;
+    padding-left:25px;
+    padding-top: 12px;
+    background: none;
+    border: none;
+    color: rgba(245,245,245,0.65);
+    outline: none;
+    font-weight: bold;
+    font-size:110%;
+}
+.SEARCH-INPUT::placeholder {
+    color: rgba(245,245,245,0.55);
+    font-size: 110%;
+    font-weight: bold;
+}
+.SEARCH-INPUT:focus {
+    color: whitesmoke;
+    font-weight: bold;
+}
+.SEARCH-INPUT::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+
+
+
+
+main {
+    margin-top: auto 1;
+    height:fit-content;
+    color:whitesmoke;
+    min-height: 788px;
+}
+.GAME-LIST {
+    background-color: none;
+    margin-top: 30px;
+    display: block;
+    min-height: 860px;
+    padding: 60px;
+    margin-bottom:70px;
+    
+}
+.GAME-LIST h1 {
+    font-size: 500%;
+    font-weight:900;
+    text-align: center;
+    margin-bottom: 100px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.415);
+    border-radius: 50px;
+    margin-right: 580px;
+    margin-left: 580px;
+}
+
+
+.GAME-ROW {
+    display: flex
+}
+
+.GAME {
+    flex: 1;
+    margin-left:50px;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+.GAME img {
+    border-radius: 30px;
+    block-size: 700px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+.GAME a{
+    background-color: none;
+    
+}
+
+
+
+
+
+footer {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:100px;
+    background: rgba(0, 0, 0, 0.76);
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 900;
+}
+footer p {
+    padding-left: 15px;
+    padding-top: 7px;
+}
+footer marquee {
+    padding-left: 15px;
+    padding-top: 35px;
+}
