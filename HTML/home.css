@@ -164,6 +164,29 @@ nav .ACTIVE:hover {
 
 
 
+.LOGIN {
+    flex: 0.35;
+    
+}
+.ACC-ICON {
+    background-color: rgba(255, 255, 255, 0.792);
+    margin-top: 25px;
+    margin-left: 15px;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+}
+.ACC-ICON img {
+    height: 70px;
+    width: 70px;
+}
+.ACC-ICON button {
+    border-radius: 100px;
+    border-style: none;
+}
+
+
+
 .SEARCH-DIV {
     margin-top: 30px;
     max-width: 400px;
@@ -298,6 +321,7 @@ main {
     font-weight:700;
     padding-right: 20px;
     text-shadow:6px 7px rgba(0, 0, 0, 0.4);
+    color: whitesmoke;
 }
 .VIEW a:hover {
     color: rgba(245,245,245,0.55);
@@ -332,6 +356,7 @@ main {
     font-weight:700;
     padding-left: 20px;
     text-shadow:6px 7px rgba(0, 0, 0, 0.4);
+    color: whitesmoke;
 }
 .POST a:hover {
     color: rgba(245,245,245,0.55);

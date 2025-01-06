@@ -186,6 +186,7 @@ nav .ACTIVE:hover {
 }
 
 
+
 .SEARCH-DIV {
     margin-top: 30px;
     max-width: 400px;
@@ -245,51 +246,8 @@ main {
     color:whitesmoke;
     min-height: 788px;
 }
-.GAME-LIST {
-    background-color: none;
-    margin-top: 30px;
-    display: block;
-    min-height: 860px;
-    padding: 60px;
-    margin-bottom:70px;
-    
-}
-.GAME-LIST h1 {
-    font-size: 500%;
-    font-weight:900;
-    text-align: center;
-    margin-bottom: 100px;
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.415);
-    border-radius: 50px;
-    margin-right: 580px;
-    margin-left: 580px;
-}
 
 
-.GAME-ROW {
-    display: flex
-}
-
-.GAME {
-    flex: 1;
-    margin-left:50px;
-    margin-right: auto;
-    margin-top: 30px;
-    margin-bottom: 100px;
-}
-.GAME img {
-    border-radius: 30px;
-    block-size: 700px;
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-}
-.GAME a{
-    background-color: none;
-    
-}
 
 
 

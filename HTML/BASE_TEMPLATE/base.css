@@ -164,6 +164,30 @@ nav .ACTIVE:hover {
 
 
 
+.LOGIN {
+    flex: 0.35;
+    
+}
+.ACC-ICON {
+    background-color: rgba(255, 255, 255, 0.792);
+    margin-top: 25px;
+    margin-left: 15px;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    
+}
+.ACC-ICON img {
+    height: 70px;
+    width: 70px;
+}
+.ACC-ICON button {
+    border-radius: 100px;
+    border-style: none;
+}
+
+
+
 .SEARCH-DIV {
     margin-top: 30px;
     max-width: 400px;
