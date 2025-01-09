@@ -255,11 +255,10 @@ main {
 
     display:flex
 }
-.GAME-IMAGE {
+.GAME-IMAGE img{
     flex:0.5;
     margin: 20px;
     border-radius: 30px;
-
 }
 .WRITING-INFO {
     flex: 1;
@@ -330,7 +329,7 @@ main {
     margin-top: 30px;
     height:50%;
     width: 30%;
-    margin-left:35%;
+    margin-left:50%;
     font-size: 400%;
     font-weight: 700;
     background-color: rgba(145, 120, 173, 0.4);
