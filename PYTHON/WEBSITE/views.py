@@ -1,12 +1,20 @@
 from flask import Blueprint, render_template
+from .auth import logged_in
+from .auth import auth
+
 
 views = Blueprint('views', __name__)
 image = str
-game_title = []
-game_info = []
-game_platforms = []
-game_release = str
 page_title = str
+game_title = ["The Legend of Zelda: Breath of the Wild", 
+"Celeste", 
+"DRAGON BALL: Sparking! ZERO", 
+"Dead Cells", "Eldin Ring", 
+"Ghost of Tsushima", 
+"Hollow Knight", 
+"Minecraft", 
+"Pokemon Black and White", 
+"Sonic Adventure 2"]
 
 
 @views.route('/')
@@ -15,9 +23,13 @@ def home():
 
 
 
-@views.route('/game-list')
+@views.route('/gamelist')
 def gamelist():
     return render_template("gamelist.html", page_title = "Games List")
 
+
+@views.route('/reviews')
+def view_reviews():
+    return render_template("reviews.html")
 
 
