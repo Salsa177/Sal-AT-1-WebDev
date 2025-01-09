@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SGT Game Reviews</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="base.css">
+    <title>{% block title %}BASE{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1", charset="utf-8">
+    {% block CSS %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/base.css') }}">
+    {% endblock %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,9 +24,10 @@
                     </button>
                 </div>
                 <div class="DROP-CONTENT">
-                    <a href="..\home.html">Home</a>
-                    <a href="..\..\HTML\gamelist.html">Games List</a>
-                    <a>About</a>
+                    <a href="/">Home</a>
+                    <a href="/game-list">Games List</a>
+                    <a href="/about">About</a>
+                    <a href="/login">Login</a>
                 </div>
             </div>
             <header>
@@ -32,16 +35,14 @@
             </header>
         </div>
         <nav>
-            <a href="..\home.html">Home</a>
-            <a href="..\..\HTML\gamelist.html">Games List</a>
-            <a>About</a>
-        </nav>  
-        <div class="LOGIN">
-            <div class="ACC-ICON" ><button><img src="..\..\IMG\person_icon.png"></button></div>
-        </div>            
+            <a href="/">Home</a>
+            <a href="/game-list">Games List</a>
+            <a href="/about">About</a>
+            <a href="/login">Login</a>
+        </nav>             
     </section>
     <main>
-
+        {% block main %}MAIN{% endblock %}
         
     </main>
     <footer>

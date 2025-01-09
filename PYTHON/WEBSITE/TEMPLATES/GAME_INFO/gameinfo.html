@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block CSS %}<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/gameinfobase.css') }}">{% endblock %}
+{% block main %}
+    <main>
+        <section class="MAIN-CONTAINER">
+            <img src="{{ url_for('static', filename=image) }}">
+            <div class="GAME-INFO-SEC">
+                <div class="HEADING"><h1>{{ game_title.__getitem__(0) }}<br>{{ game_title.__getitem__(1) }}</h1>
+                    <button type="button" class="GO-BACK"><a href="/game-list">X</a></button></div>
+                <p> {{ game_info.__getitem__(0) }} <br><br>
+                    {{ game_info.__getitem__(1) }}
+                    {{ game_info.__getitem__(2) }}
+                    <br><br><br><br>Release date: {{ game_release}}
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

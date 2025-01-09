@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}{{page_title}}{% endblock %}
+{% block CSS %}<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/gamelist.css') }}">{% endblock %}
+{% block main %}
+    <main>
+        <section class="GAME-LIST">
+            <h1>GAME LIST</h1>
+            <div class="GAME-ROW">
+                <div class="GAME"><a href="/games/botw"><img src="{{ url_for('static', filename='IMG/botw.png') }}"></a></div>
+                <div class="GAME"><a href="/games/celeste"><img src="{{ url_for('static', filename='IMG/celeste.png') }}"></a></div>
+            </div>
+            <div class="GAME-ROW">
+                <div class="GAME"><a href="/games/dbsz"><img src="{{ url_for('static', filename='IMG/dbsz.png') }}"></a></div>
+                <div class="GAME"><a href="/games/deadcells"><img src="{{ url_for('static', filename='IMG/deadcells.png') }}"></a></div>
+            </div>
+            <div class="GAME-ROW">
+                <div class="GAME"><a href="/games/eldinring"><img src="{{ url_for('static', filename='IMG/eldinring.png') }}"></a></div>
+                <div class="GAME"><a href="/games/got"><img src="{{ url_for('static', filename='IMG/got.png') }}"></a></div>
+            </div>
+            <div class="GAME-ROW">
+                <div class="GAME"><a href="/games/hollowknight"><img src="{{ url_for('static', filename='IMG/hollowknight.png') }}"></a></div>
+                <div class="GAME"><a href="/games/minecraft"><img src="{{ url_for('static', filename='IMG/minecraft.png') }}"></a></div>
+            </div>
+            <div class="GAME-ROW">
+                <div class="GAME"><a href="/games/pkmn-bw"><img src="{{ url_for('static', filename='IMG/bw.png') }}"></a></div>
+                <div class="GAME"><a href="/games/sa2"><img src="{{ url_for('static', filename='IMG/sa2.png') }}"></a></div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

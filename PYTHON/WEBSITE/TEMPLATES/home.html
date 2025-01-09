@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{page_title}}{% endblock %}
+{% block CSS %}<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/home.css') }}">{% endblock %}
+{% block main %}
+    <main>
+        <section class="MAIN-TOP">
+            <div class="DIV-GET-STARTED">
+                <a href="/get_started">
+                    <p>GET STARTED</p>
+                </a>
+            </div>
+            <section class="VIEW-POST-SEC">
+                <div class="VIEW-DIV">
+                    <div class="VIEW">
+                        <a href="/view_reviews">VIEW REVIEWS</a>
+                    </div>
+                </div>
+                <div class="POST-DIV">
+                    <div class="POST">
+                        <a href="/post_reviews">POST REVIEWS</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+{% endblock %}
