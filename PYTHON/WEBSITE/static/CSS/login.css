@@ -247,6 +247,80 @@ main {
     color:whitesmoke;
     min-height: 788px;
 }
+.LOGIN-INFO {
+    padding: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 200%;
+    text-align: center;
+    font-weight: 800;
+}
+.LOGIN ::placeholder {
+    color: rgb(86, 86, 86);
+}
+.LOGIN input[type=email] {
+    width: 30%;
+    height: 50px;
+    box-sizing: border-box;
+    box-sizing: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 3px;
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.75);
+    font-size: 70%;
+    font-weight: 600;
+}
+.LOGIN input[type=password] {
+    width: 30%;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    box-sizing: 100px;
+    border: none;
+    border-radius: 3px;
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.75);
+    font-size: 70%;
+    font-weight: 600;
+}
+.LOGIN input:focus {
+    border: none;
+    text-decoration: none;
+    outline: none;
+    background-color: whitesmoke;
+}
+.LOGIN input[type=submit] {
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 100%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.677);
+    border-radius: 10px;
+    font-weight: 800;
+    color:rgb(62, 81, 73);
+}
+.LOGIN input[type=submit]:hover {
+    background-color: whitesmoke;
+    color:rgb(94, 119, 108);
+}
+.OTHER-INFO {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-right: 100px;
+    font-weight: 700;
+}
+.OTHER-INFO a {
+    margin-left: 100px;
+}
+.OTHER-INFO a:hover {
+    color:rgba(245, 245, 245, 0.65);
+    cursor:pointer;
+}
+
 
 
 
