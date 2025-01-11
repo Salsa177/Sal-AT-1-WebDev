@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block CSS %}<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/about.css') }}">{% endblock %}
+{% block main %}
+<main>
+    <section class="ABOUT">
+        <div class="HEADING">
+            <h1> ABOUT THIS SITE...</h1>
+        </div>
+        <div class="PARAGRAPH">
+            <p>In this site you can view and post reviews as long as you are <br> 
+                logged into an account. To learn how to post a review, <br> 
+                view the <a href="..\HTML\getstarted.html">GET STARTED</a> page, it will teach you the 
+                <br>basics of posting reviews.
+            </p>
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -28,8 +28,13 @@ def gamelist():
     return render_template("gamelist.html", page_title = "Games List")
 
 
+
 @views.route('/reviews')
 def view_reviews():
-    return render_template("reviews.html")
+    return render_template("reviews.html", page_title = "Reviews")
 
 
+
+@views.route('/about')
+def about():
+    return render_template("about.html", page_title = "About")

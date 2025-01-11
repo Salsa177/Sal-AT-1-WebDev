@@ -5,7 +5,7 @@ logged_in : bool = False
 
 @auth.route('/login')
 def login():
-    return '<p>login<p>'
+    return render_template("login.html")
 
 
 
@@ -18,7 +18,7 @@ def logout():
 @auth.route('/sign-up')
 def sign_up():
     if logged_in:
-        return '<p>sign up<p>'
+        return render_template("sign-up.html")
     
 
 @auth.route('/posting')
