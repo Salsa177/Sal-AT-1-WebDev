@@ -7,7 +7,7 @@
             <img src="{{ url_for('static', filename=image) }}">
             <div class="GAME-INFO-SEC">
                 <div class="HEADING"><h1>{{ game_title.__getitem__(0) }}<br>{{ game_title.__getitem__(1) }}</h1>
-                    <button type="button" class="GO-BACK"><a href="/game-list">X</a></button></div>
+                    <button type="button" class="GO-BACK"><a href="/gamelist">X</a></button></div>
                 <p> {{ game_info.__getitem__(0) }} <br><br>
                     {{ game_info.__getitem__(1) }}
                     {{ game_info.__getitem__(2) }}

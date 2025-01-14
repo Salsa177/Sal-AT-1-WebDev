@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}{{page_title}}{% endblock %}
+{% block CSS %}<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/post.css') }}">{% endblock %}
+{% block main %}
+<main>
+    <section class="POSTING">
+        <div class="WRITING">
+            <div class="GAME-IMAGE">
+                <img src="..\static\IMG\{{gameimage}}">
+            </div>
+            <div class="SELECT-GAME"></div>
+            <div class="WRITING-INFO">
+                <section class="TITLE">
+                    <h1>{{game_title}}</h1>
+                </section>
+                <section class="REVIEW">
+                    <textarea placeholder="Write your review here..." 
+                    cols="40" rows="7" wrap=physical></textarea>
+                </section>
+                <div class="SCORE">
+                    <p>Score <input type="text" placeholder="_" maxlength="1">/10</p>
+                </div>
+            </div>
+        </div>
+        <div class="POSTING-BUTTON">
+            <button type="submit">POST REVIEW</button>
+        </div>
+    </section>
+</main>
+{% endblock %}

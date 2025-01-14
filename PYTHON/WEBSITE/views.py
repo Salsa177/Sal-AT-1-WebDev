@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template
-from .auth import logged_in
 from .auth import auth
+from .auth import logged_in
+from flask_login import login_required, current_user
 
 
 views = Blueprint('views', __name__)
@@ -19,7 +20,7 @@ game_title = ["The Legend of Zelda: Breath of the Wild",
 
 @views.route('/')
 def home():
-    return render_template("home.html", page_title = "Home")
+    return render_template("home.html", page_title = "Home",)
 
 
 

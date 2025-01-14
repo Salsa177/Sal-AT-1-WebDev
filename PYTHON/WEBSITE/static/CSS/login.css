@@ -237,7 +237,34 @@ nav .ACTIVE:hover {
     -webkit-appearance: none;
 }
 
-
+.alert-success {
+    background-color: rgb(140, 200, 160);
+    text-align: center;
+    color: whitesmoke;
+    font-size: 150%;
+    margin-right: 40%;
+    margin-left: 40%;
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 10px;
+}
+.alert-danger {
+    background-color: rgb(200, 140, 140);
+    text-align: center;
+    color: whitesmoke;
+    font-size: 150%;
+    margin-right: 36%;
+    margin-left: 36%;
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 10px;
+}
+.close {
+    background: none;
+    border: none;
+    font-size: 120%;
+    color:whitesmoke;
+}
 
 
 
@@ -246,6 +273,12 @@ main {
     height:fit-content;
     color:whitesmoke;
     min-height: 788px;
+}
+.LOG-HEAD {
+    margin-bottom: 75px;
+    color:rgb(171, 218, 185);
+    font-weight: 900;
+    font-size: 200%;
 }
 .LOGIN-INFO {
     padding: 100px;
@@ -256,9 +289,23 @@ main {
     font-weight: 800;
 }
 .LOGIN ::placeholder {
-    color: rgb(86, 86, 86);
+    color: rgba(86, 86, 86, 0.75);
 }
 .LOGIN input[type=email] {
+    width: 30%;
+    height: 50px;
+    box-sizing: border-box;
+    box-sizing: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.75);
+    font-size: 70%;
+    font-weight: 600;
+}
+.LOGIN input[type=text] {
     width: 30%;
     height: 50px;
     box-sizing: border-box;
@@ -308,7 +355,7 @@ main {
     color:rgb(94, 119, 108);
 }
 .OTHER-INFO {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 0px;
     margin-right: 100px;
     font-weight: 700;
@@ -316,6 +363,7 @@ main {
 .OTHER-INFO a {
     color:whitesmoke;
     margin-left: 100px;
+    text-decoration: underline;
 }
 .OTHER-INFO a:hover {
     color:rgb(201, 168, 255);
