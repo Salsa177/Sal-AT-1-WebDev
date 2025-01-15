@@ -6,6 +6,7 @@ from flask_login import login_user, login_required, logout_user, current_user
 
 auth = Blueprint('auth', __name__)
 logged_in : bool = False
+gameimage = ""
 
 @auth.route('/logout')
 def logout():
@@ -34,7 +35,7 @@ def login():
         else:
             flash('Account under that email does not exist', category='error')
 
-    return render_template("login.html")
+    return render_template("login.html", user=current_user)
 
 
 
@@ -64,13 +65,25 @@ def sign_up():
             return redirect(url_for('auth.login'))
             
 
-    return render_template("signup.html")
+    return render_template("signup.html", user=current_user)
     
 
 
-@auth.route('/posting')
+@auth.route('/posting', methods=['GET', 'POST'])
 @login_required
 def post_reviews():
-    return render_template("post.html")
+
+    
+
+
+    if request.method == 'POST':
+        selected_game = request.form.get('select-game')
+
+        if str(selected_game) == "botw":
+            gameimage = "botw.png"
+
+    return render_template("post.html", user=current_user, gameimage="placeholder.png", 
+                           data=[{"name: botw"}, 
+                                 {"name: celeste"}])
 
 

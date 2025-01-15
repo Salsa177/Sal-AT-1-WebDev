@@ -20,22 +20,22 @@ game_title = ["The Legend of Zelda: Breath of the Wild",
 
 @views.route('/')
 def home():
-    return render_template("home.html", page_title = "Home",)
+    return render_template("home.html", page_title = "Home", user=current_user)
 
 
 
 @views.route('/gamelist')
 def gamelist():
-    return render_template("gamelist.html", page_title = "Games List")
+    return render_template("gamelist.html", page_title = "Games List", user=current_user)
 
 
 
 @views.route('/reviews')
 def view_reviews():
-    return render_template("reviews.html", page_title = "Reviews")
+    return render_template("reviews.html", page_title = "Reviews", user=current_user)
 
 
 
 @views.route('/about')
 def about():
-    return render_template("about.html", page_title = "About")
+    return render_template("about.html", page_title = "About", user=current_user)

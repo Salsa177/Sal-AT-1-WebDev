@@ -8,18 +8,31 @@
             <div class="GAME-IMAGE">
                 <img src="..\static\IMG\{{gameimage}}">
             </div>
-            <div class="SELECT-GAME"></div>
             <div class="WRITING-INFO">
-                <section class="TITLE">
-                    <h1>{{game_title}}</h1>
-                </section>
-                <section class="REVIEW">
+                <form class="SELECT-GAME">
+                    <label for="game">Select a game:</label>
+                    <select method="POST" name="select-games" id="select-games" for="select-games" required=true>
+                        {% for o in data %}
+                        <option value="botw">botw</option>
+                        <option value="{{ o.name }}">{{ o.name }}</option>
+                        <option value="dbsz">DRAGON BALL: Sparking! Zero</option>
+                        <option value="deadcells">Dead Cells</option>
+                        <option value="eldinring">Eldin Ring</option>
+                        <option value="got">Ghost of Tsushima</option>
+                        <option value="hollowknight">Hollow Knight</option>
+                        <option value="minecraft">Minecraft</option>
+                        <option value="pokemon">Pokémon Black & White</option>
+                        <option value="sa2">Sonic Adventure 2</option>
+                        {% endfor %}
+                    </select>
+                </form>
+                <form class="REVIEW">
                     <textarea placeholder="Write your review here..." 
-                    cols="40" rows="7" wrap=physical></textarea>
-                </section>
-                <div class="SCORE">
+                    cols="40" rows="7" wrap=physical required=true></textarea>
+                </form>
+                <form class="SCORE" required=true>
                     <p>Score <input type="text" placeholder="_" maxlength="1">/10</p>
-                </div>
+                </form>
             </div>
         </div>
         <div class="POSTING-BUTTON">
