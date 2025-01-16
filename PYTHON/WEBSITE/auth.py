@@ -1,8 +1,11 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for
+from flask import Blueprint, render_template, request, flash, redirect, url_for, request
 from .models import User, Review
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 from flask_login import login_user, login_required, logout_user, current_user
+from .forms import GameSelectForm
+from .models import Games
+from sqlalchemy.sql import func
 
 auth = Blueprint('auth', __name__)
 logged_in : bool = False
@@ -18,7 +21,6 @@ def logout():
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
-
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
@@ -73,17 +75,25 @@ def sign_up():
 @login_required
 def post_reviews():
 
-    
-
+    form = GameSelectForm()
 
     if request.method == 'POST':
-        selected_game = request.form.get('select-game')
+        review = request.form.get('review')
+        score = request.form.get('score')
+        username = current_user.username
+        userid = current_user.id
+        print("hello")
+        
 
-        if str(selected_game) == "botw":
-            gameimage = "botw.png"
+        if len(review) < 1:
+            flash("Must provide a review", category='error')
+        elif len(score) < 1:
+            flash("Must enter a score", category='error')
+        else:
+            new_review = Review(text=review, game=form.games.data, user_name=username, user_id=userid, score=score)
+            db.session.add(new_review)
+            db.session.commit()
+            flash('Review posted', category='success')
+            return redirect(url_for('views.home'))
 
-    return render_template("post.html", user=current_user, gameimage="placeholder.png", 
-                           data=[{"name: botw"}, 
-                                 {"name: celeste"}])
-
-
+    return render_template("post.html", user=current_user, gameimage="placeholder.png", form=form)

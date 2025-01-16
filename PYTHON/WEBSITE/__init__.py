@@ -22,10 +22,26 @@ def create_app():
     app.register_blueprint(gameinfo, url_prefix='/gamelist')
     app.static_folder = 'STATIC'
 
-    from .models import User, Review
+    from .models import User, Review, Games
 
     with app.app_context():
         db.create_all()
+        row_count = Games.query.count()
+
+        if row_count != 10:
+            db.session.add_all([
+                Games(title='The Legend of Zelda: Breath of the Wild', image="botw.png"),
+                Games(title='Celeste', image="celeste.png"),
+                Games(title='DRAGON BALL: Ssparking! ZERO', image="dbsz.png"),
+                Games(title='Dead Cells', image="deadcells.png"),
+                Games(title='Eldin Ring', image="eldinring.png"),
+                Games(title='Ghost of Tsushima', image="got.png"),
+                Games(title='Hollow Knight', image="hollowknight.png"),
+                Games(title='Minecraft', image="minecraft.png"),
+                Games(title='Pokemon Black & White', image="bw.png"),
+                Games(title='Sonic Adventure 2', image="sa2.png")
+            ])
+        db.session.commit()
 
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'

@@ -6,6 +6,8 @@ game_title = []
 game_info = []
 game_release = str
 page_title = str
+from flask_login import login_required, current_user
+
 
 
 
@@ -19,7 +21,8 @@ def botw():
 
             game_release = "March 3rd 2017", 
             game_title = ["The Legend of Zelda:", "Breath of the Wild"],
-            page_title = "Breath of the Wild"
+            page_title = "Breath of the Wild",
+            user=current_user
             )
 
 
@@ -34,7 +37,8 @@ def celeste():
 
             game_release = "October 8th 2024", 
             game_title = ["Celeste", ""],
-            page_title = "Celeste"
+            page_title = "Celeste",
+            user=current_user
             )
 
 
@@ -49,7 +53,8 @@ def dbsz():
 
             game_release = "October 8th 2024", 
             game_title = ["DRAGON BALL:", "Sparking! ZERO"],
-            page_title = "DBSZ"
+            page_title = "DBSZ",
+            user=current_user
             )
 
 
@@ -64,7 +69,8 @@ def deadcells():
 
             game_release = "May 10th 2017", 
             game_title = ["Dead Cells", ""],
-            page_title = "Dead Cells"
+            page_title = "Dead Cells",
+            user=current_user
             )
 
 
@@ -79,7 +85,8 @@ def eldinring():
 
             game_release = "February 25th 2022", 
             game_title = ["Eldin Ring", ""],
-            page_title = "Eldin Ring"
+            page_title = "Eldin Ring",
+            user=current_user
             )
 
 
@@ -94,7 +101,8 @@ def got():
 
             game_release = "July 17th 2020", 
             game_title = ["Ghost of Tsushima", ""],
-            page_title = "Ghost of Tsushima"
+            page_title = "Ghost of Tsushima",
+            user=current_user
             )
 
 
@@ -109,7 +117,8 @@ def hollowknight():
 
             game_release = "Februrary 24th 2017", 
             game_title = ["Hollow Knight", ""],
-            page_title = "Hollow Knight"
+            page_title = "Hollow Knight",
+            user=current_user
             )
 
 
@@ -124,7 +133,8 @@ def mineacraft():
 
             game_release = "November 18th 2011", 
             game_title = ["Minecraft", ""],
-            page_title = "Minecraft"
+            page_title = "Minecraft",
+            user=current_user
             )
 
 
@@ -139,7 +149,8 @@ def pokemon_bw():
 
             game_release = "September 18th 2010", 
             game_title = ["Pokémon", "Black and White"],
-            page_title = "Pokémon Black and White"
+            page_title = "Pokémon Black and White",
+            user=current_user
             )
 
 
@@ -154,5 +165,6 @@ def sa2():
 
             game_release = "June 18th 2001", 
             game_title = ["Sonic Adventure 2", ""],
-            page_title = "Sonic Adventure 2"
+            page_title = "Sonic Adventure 2",
+            user=current_user
             )

@@ -5,39 +5,21 @@
 <main>
     <section class="POSTING">
         <div class="WRITING">
-            <div class="GAME-IMAGE">
-                <img src="..\static\IMG\{{gameimage}}">
-            </div>
-            <div class="WRITING-INFO">
-                <form class="SELECT-GAME">
+            <form class="WRITING-INFO">
+                <div class="SELECT-GAME">
                     <label for="game">Select a game:</label>
-                    <select method="POST" name="select-games" id="select-games" for="select-games" required=true>
-                        {% for o in data %}
-                        <option value="botw">botw</option>
-                        <option value="{{ o.name }}">{{ o.name }}</option>
-                        <option value="dbsz">DRAGON BALL: Sparking! Zero</option>
-                        <option value="deadcells">Dead Cells</option>
-                        <option value="eldinring">Eldin Ring</option>
-                        <option value="got">Ghost of Tsushima</option>
-                        <option value="hollowknight">Hollow Knight</option>
-                        <option value="minecraft">Minecraft</option>
-                        <option value="pokemon">Pokémon Black & White</option>
-                        <option value="sa2">Sonic Adventure 2</option>
-                        {% endfor %}
-                    </select>
-                </form>
-                <form class="REVIEW">
-                    <textarea placeholder="Write your review here..." 
-                    cols="40" rows="7" wrap=physical required=true></textarea>
-                </form>
-                <form class="SCORE" required=true>
-                    <p>Score <input type="text" placeholder="_" maxlength="1">/10</p>
-                </form>
-            </div>
+                    {{ form.csrf_token }}
+                    {{ form.games }}
+                </div>
+                <input class="REVIEW", type="text", placeholder="Write your review here...", 
+                cols="40", rows="7", wrap=physical, maxlength="2000", name="review", id="review">
+                <label class="SCORE-LABEL", for="score">Score:</label>
+                <input class="SCORE", type="text", placeholder="_", maxlength="1", name="score", id="score">
+                <label class="SCORE-5", for="score">/5</label>
+                <input class="POSTING-BUTTON", type="submit" ,name="submit", id="submit", value="POST REVIEW">
+            </form>
         </div>
-        <div class="POSTING-BUTTON">
-            <button type="submit">POST REVIEW</button>
-        </div>
+        
     </section>
 </main>
 {% endblock %}
