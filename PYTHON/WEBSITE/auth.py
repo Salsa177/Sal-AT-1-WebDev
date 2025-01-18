@@ -82,18 +82,49 @@ def post_reviews():
         score = request.form.get('score')
         username = current_user.username
         userid = current_user.id
-        print("hello")
-        
+        selected_game = ""
+        acceptable_score = ['0', '1', '2', '3', '4', '5']
+
+
+        if form.games.raw_data == ['1']:
+            selected_game = "The Legend of Zelda: Breath of the Wild"
+        elif form.games.raw_data == ['2']:
+            selected_game = "Celeste"
+        elif form.games.raw_data == ['3']:
+            selected_game = "DRAGON BALL: Sparking! ZERO"
+        elif form.games.raw_data == ['4']:
+            selected_game = "Dead Cells"
+        elif form.games.raw_data == ['5']:
+            selected_game = "Eldin Ring"
+        elif form.games.raw_data == ['6']:
+            selected_game = "Ghost of Tsushima"
+        elif form.games.raw_data == ['7']:
+            selected_game = "Hollow Knight"
+        elif form.games.raw_data == ['8']:
+            selected_game = "Minecraft"
+        elif form.games.raw_data == ['9']:
+            selected_game = "Pokémon Black and White"
+        elif form.games.raw_data == ['10']:
+            selected_game = "Sonic Adventure 2"
+
 
         if len(review) < 1:
             flash("Must provide a review", category='error')
+            print(selected_game)
         elif len(score) < 1:
             flash("Must enter a score", category='error')
+        elif score not in acceptable_score:
+            flash("Score must be a number between 1 and 5", category='error')
         else:
-            new_review = Review(text=review, game=form.games.data, user_name=username, user_id=userid, score=score)
+            new_review = Review(text=review, game=selected_game, user_name=username, user_id=userid, score=int(score))
             db.session.add(new_review)
             db.session.commit()
             flash('Review posted', category='success')
             return redirect(url_for('views.home'))
 
     return render_template("post.html", user=current_user, gameimage="placeholder.png", form=form)
+
+
+
+
+

@@ -249,7 +249,34 @@ main {
 }
 
 
-
+.alert-success {
+    background-color: rgb(140, 200, 160);
+    text-align: center;
+    color: whitesmoke;
+    font-size: 150%;
+    margin-right: 40%;
+    margin-left: 40%;
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 10px;
+}
+.alert-danger {
+    background-color: rgb(200, 140, 140);
+    text-align: center;
+    color: whitesmoke;
+    font-size: 150%;
+    margin-right: 36%;
+    margin-left: 36%;
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 10px;
+}
+.close {
+    background: none;
+    border: none;
+    font-size: 120%;
+    color:whitesmoke;
+}
 
 
 

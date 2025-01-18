@@ -11,8 +11,8 @@ class User(db.Model, UserMixin):
 class Review(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.String(2000))
-    date = db.Column(db.DateTime(timezone=True), default=func.now())
-    game = db.Column(db.Integer)
+    score = db.Column(db.Integer)
+    game = db.Column(db.String(1000))
     user_name = db.Column(db.String(150))
     user_id = db.Column(db.Integer)
     
