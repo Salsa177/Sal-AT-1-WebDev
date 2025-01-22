@@ -3,6 +3,11 @@
 {% block CSS %}<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/reviews.css') }}">{% endblock %}
 {% block main %}
 <main>
-    
+    <ul>
+        {% for review in reviews %}
+            <script type="py" src="./revs.py" config="./pyscript.json"></script>
+            <li class="list-group-item">{{ current_review }}</li><br>
+        {% endfor %}
+    </ul>
 </main>
 {% endblock %}

@@ -2,13 +2,15 @@ from flask import Blueprint, render_template, request
 from .auth import auth
 from .auth import logged_in
 from flask_login import login_required, current_user
-from .models import Review
+from .models import *
 from sqlalchemy import *
 from flask_sqlalchemy import *
 from sqlalchemy.sql import *
+from WEBSITE import db
 
 
-db = SQLAlchemy()
+
+
 views = Blueprint('views', __name__)
 image = str
 page_title = str
@@ -35,26 +37,30 @@ def gamelist():
 
 
 
-@views.route('/reviews')
+@views.route('/reviews', methods=['GET', 'POST'])
 def view_reviews():
-    id = request.form.get('id')
-    text = request.form.get('text')
-    score = request.form.get('score')
-    game = request.form.get('game')
-    username = request.form.get('user_name')
-    userid = request.form.get('user_id')
-    review_amt = Review.query.count()
-    reviews = Review.query.all()
-
-    smt = select(Review).where(Review.id == 1)
+    row = 0
+    
+    reviews = db.session.query(Review).all()
+    
+    for review in reviews:
+        row += 1
+        current_review = db.session.query(Review).filter(Review.id==row).first()
+        if current_review == None:
+            row = 1
+        print(current_review)
 
     
-    
-    return render_template("reviews.html", page_title = "Reviews", user=current_user, Review=Review)
-
+    return render_template("reviews.html", page_title = "Reviews", user=current_user, 
+                           reviews=reviews, row=row, current_review=current_review,
+                           )
 
 
 @views.route('/about')
 def about():
     
     return render_template("about.html", page_title = "About", user=current_user)
+
+def test(row):
+    row += 1
+    return row
