@@ -40,19 +40,14 @@ def gamelist():
 @views.route('/reviews', methods=['GET', 'POST'])
 def view_reviews():
     row = 0
-    
     reviews = db.session.query(Review).all()
+    review_count = len(reviews)
+    print(review_count)
     
-    for review in reviews:
-        row += 1
-        current_review = db.session.query(Review).filter(Review.id==row).first()
-        if current_review == None:
-            row = 1
-        print(current_review)
 
     
     return render_template("reviews.html", page_title = "Reviews", user=current_user, 
-                           reviews=reviews, row=row, current_review=current_review,
+                           reviews=reviews, row=row, review_count=review_count
                            )
 
 
@@ -61,6 +56,4 @@ def about():
     
     return render_template("about.html", page_title = "About", user=current_user)
 
-def test(row):
-    row += 1
-    return row
+

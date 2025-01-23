@@ -6,6 +6,7 @@ from flask_login import login_user, login_required, logout_user, current_user
 from .forms import GameSelectForm
 from .models import Games
 from sqlalchemy.sql import func
+import datetime
 
 auth = Blueprint('auth', __name__)
 logged_in : bool = False
@@ -80,8 +81,16 @@ def post_reviews():
     if request.method == 'POST':
         review = request.form.get('review')
         score = request.form.get('score')
+        title = request.form.get('title')
         username = current_user.username
         userid = current_user.id
+        time = datetime.datetime.now()
+        day = time.strftime("%d ")
+        month = time.strftime("%b ")
+        year = time.strftime("%Y")
+        date = day + month + year
+        print(date)
+
         selected_game = ""
         acceptable_score = ['0', '1', '2', '3', '4', '5']
 
@@ -107,8 +116,9 @@ def post_reviews():
         elif form.games.raw_data == ['10']:
             selected_game = "Sonic Adventure 2"
 
-
-        if len(review) < 1:
+        if len(title) < 1:
+            flash("Must provide a title", category='error')
+        elif len(review) < 1:
             flash("Must provide a review", category='error')
             print(selected_game)
         elif len(score) < 1:
@@ -116,7 +126,7 @@ def post_reviews():
         elif score not in acceptable_score:
             flash("Score must be a number between 1 and 5", category='error')
         else:
-            new_review = Review(text=review, game=selected_game, user_name=username, user_id=userid, score=int(score))
+            new_review = Review(text=review, game=selected_game, user_name=username, user_id=userid, score=int(score), title=title, date=date)
             db.session.add(new_review)
             db.session.commit()
             flash('Review posted', category='success')

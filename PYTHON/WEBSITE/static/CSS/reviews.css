@@ -1,0 +1,53 @@
+
+
+.REVIEW-BOX {
+    display:block;
+    block-size: auto;
+    border-color: black;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 7px;
+    padding: 10px;
+    padding-top: 5px;
+    margin: 30px;
+    margin-bottom: 100px;
+    background-color: rgba(255, 255, 255, 0.175);
+}
+.INFO {
+    display: flex;
+    border-bottom: 7px solid black;
+    padding: 15px;
+}
+.USERNAME {
+    flex: 0.25;
+    text-align: left;
+    margin-left: 2%;
+    font-size: 160%;
+    font-weight: 900 ;
+}
+.DATE {
+    flex: 0.25;
+    text-align: right;
+    margin-right: 2%;
+    font-size: 160%;
+    font-weight: 900;
+}
+.TITLE {
+    font-family: Arial, Helvetica, sans-serif;
+    flex: 1;
+    text-align: center;
+    margin-right: 2%;
+    font-size: 250%;
+    font-weight:800;
+
+}
+.REVIEW-AREA {
+    flex: 1;
+    padding: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: left;
+    margin-right: 2%;
+    font-size: 125%;
+    font-weight: 400;
+}

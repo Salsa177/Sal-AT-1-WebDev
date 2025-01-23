@@ -11,8 +11,10 @@
                     {{ form.csrf_token }}
                     {{ form.games }}
                 </div>
-                <input class="REVIEW", type="text", placeholder="Write your review here...", 
-                cols="40", rows="7", wrap=physical, maxlength="2000", name="review", id="review">
+                <input class="TITLE", type="text", placeholder="Title...", 
+                cols="40", rows="1", wrap="physical", maxlength="50", name="title", id="title">
+                <textarea class="REVIEW", type="text", placeholder="Write your review here...", 
+                cols="40", rows="7", wrap=physical, maxlength="2000", name="review", id="review"></textarea>
                 <label class="SCORE-LABEL", for="score">Score:</label>
                 <input class="SCORE", type="text", placeholder="_", maxlength="1", name="score", id="score">
                 <label class="SCORE-5", for="score">/5</label>
