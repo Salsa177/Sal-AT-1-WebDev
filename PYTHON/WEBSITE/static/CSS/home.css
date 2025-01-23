@@ -3,14 +3,6 @@
     display: block;
 }
 .DIV-GET-STARTED {
-    color:whitesmoke;
-    background-color: rgba(145, 120, 173, 0.4);
-    box-shadow:0px 30px rgba(22, 10, 29, 0.5);
-    border-radius: 50px;
-    user-select: none;
-    cursor:default;
-    min-block-size: 200px;
-    text-align: center;
     margin-bottom: 100px;
     margin-top: 90px;
     margin-right: 600px;

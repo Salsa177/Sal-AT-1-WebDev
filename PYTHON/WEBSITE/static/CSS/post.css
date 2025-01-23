@@ -5,6 +5,7 @@
     display:block;
 }
 .WRITING {
+    
     block-size: 650px;
     display:flex
 }
@@ -15,7 +16,7 @@
 .REVIEW {
     block-size:390px;
     width: 95%;
-    background: none;
+    background-color: rgba(255, 255, 255, 0.175);
     border-width: 5px;
     border-radius: 15px;
     border-style: solid;
@@ -33,14 +34,14 @@
     resize: none;
 }
 .REVIEW::placeholder {
-    color: rgba(184, 219, 205, 0.684);
+    color: rgba(207, 231, 221, 0.75);
 }
 .TITLE {
     text-align: center;
     block-size:85px;
     padding: 20px;
     width: 95%;
-    background: none;
+    background-color: rgba(255, 255, 255, 0.175);
     border-width: 5px;
     border-radius: 15px;
     border-style: solid;
@@ -60,7 +61,7 @@
     vertical-align: text-top;
 }
 .TITLE::placeholder {
-    color: rgba(184, 219, 205, 0.684);
+    color: rgba(207, 231, 221, 0.75);
 }
 .SCORE-LABEL {
     margin-left: 270px;

@@ -3,20 +3,19 @@
 .REVIEW-BOX {
     display:block;
     block-size: auto;
+    margin: 30px;
+    margin-bottom: 100px;
+    
+}
+.INFO {
+    display: flex;
     border-color: black;
     border-style: solid;
     border-radius: 15px;
     border-width: 7px;
-    padding: 10px;
-    padding-top: 5px;
-    margin: 30px;
-    margin-bottom: 100px;
-    background-color: rgba(255, 255, 255, 0.175);
-}
-.INFO {
-    display: flex;
-    border-bottom: 7px solid black;
     padding: 15px;
+    margin-right: 2%;
+    background-color: rgba(255, 255, 255, 0.175);
 }
 .USERNAME {
     flex: 0.25;
@@ -43,6 +42,12 @@
 }
 .REVIEW-AREA {
     flex: 1;
+    border-color: black;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 7px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.175);
     padding: 25px;
     padding-left: 50px;
     padding-right: 50px;
