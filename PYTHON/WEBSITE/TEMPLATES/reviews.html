@@ -10,8 +10,8 @@
                 <div class="REVIEW-BOX">
                     <div class="INFO">
                         <div class="USERNAME">By: {{ reviews[ns.row].user_name }}</div>
-                        <div class="TITLE">{{ reviews[ns.row].title }}</div>
-                        <div class="DATE">{{ reviews[ns.row].date }}</div>
+                        <div class="TITLE">{{ reviews[ns.row].title }} - - {{ reviews[ns.row].score }}/5</div>
+                        <div class="DATE"> {{ reviews[ns.row].date }}</div>
                     </div>
                     <div class="REVIEW-AREA">
                         {{ reviews[ns.row].text }}
