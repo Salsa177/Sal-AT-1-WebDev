@@ -124,7 +124,7 @@ def hollowknight():
 
 
 @gameinfo.route('/minecraft')
-def mineacraft():
+def minecraft():
     return render_template(
             "gameinfo.html", image = "IMG/minecraft.png", 
             game_info = ["Minecraft is a procedurally generated voxel-sandbox developed by Mojang Studios", 
