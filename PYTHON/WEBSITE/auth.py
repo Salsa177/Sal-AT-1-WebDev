@@ -11,6 +11,7 @@ import datetime
 auth = Blueprint('auth', __name__)
 logged_in : bool = False
 gameimage = ""
+page_title = str
 
 @auth.route('/logout')
 def logout():
@@ -38,7 +39,7 @@ def login():
         else:
             flash('Account under that email does not exist', category='error')
 
-    return render_template("login.html", user=current_user)
+    return render_template("login.html", user=current_user, page_title = "Login")
 
 
 
@@ -68,7 +69,7 @@ def sign_up():
             return redirect(url_for('auth.login'))
             
 
-    return render_template("signup.html", user=current_user)
+    return render_template("signup.html", user=current_user, page_title = "Sign Up")
     
 
 
@@ -132,7 +133,7 @@ def post_reviews():
             flash('Review posted', category='success')
             return redirect(url_for('views.home'))
 
-    return render_template("post.html", user=current_user, gameimage="placeholder.png", form=form)
+    return render_template("post.html", user=current_user, gameimage="placeholder.png", form=form, page_title = "Post")
 
 
 
